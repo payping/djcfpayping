@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="djclassifiedspayment"  method="upgrade">
+	<name>درگاه پی‌پینگ</name>
+	<creationDate>2021-01-01</creationDate>
+	<authorEmail>mahdisarani1995@google.com</authorEmail>
+	<author>Mahdi Sarani</author>
+	<authorUrl>https://mahdisarani.ir</authorUrl>
+	<version>1.0</version>
+	<copyright>all right</copyright>
+	<license>GNU/GPL license: http://www.gnu.org/copyleft/gpl.html</license>
+	<description><![CDATA[<p>[ تیم فنی پی‌پینگ ]</p>]]></description>
+	
+	<updateservers>
+		<server type="extension" priority="1" name="درگاه پی پینگ">http://donyadideh.com</server>
+	</updateservers>
+	
+	<files>
+		<filename plugin="djcfpayping">djcfpayping.php</filename>
+		<folder>assets</folder>
+		<folder>languages</folder>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.plg_djclassifiedspayment_djcfpayping.ini</language>
+		<language tag="fa-IR">fa-IR.plg_djclassifiedspayment_djcfpayping.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/plugins/djclassifiedspayment/djcfpayping">
+			
+				<field name="title" type="text" default="درگاه پرداخت پی‌پینگ" label="عنوان درگاه پرداخت" />
+				
+				<field name="description" type="text" default="" label="توضیحات درگاه پرداخت"/>
+				
+				<field name="token_code" type="text" required="true" default="" label="توکن پی‌پینگ"/>
+				
+				<field name="currency" type="radio" class="btn-group" default="rial" label="واحد پولی">
+					<option value="rial">ریال</option>
+					<option value="toman">تومان</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
